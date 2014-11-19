@@ -1,0 +1,34 @@
+<%= render 'form' %><br>
+<div class="row">
+  <div class="col-md-3"></div>
+  <%if @comments.present? %>
+  <div class="col-md-5 well">
+    <center><i><h1 style="color: green;"><%= "comments"%></h1></i></center>
+    <% @comments.each do |comment| %>  
+        <h5 style="color:blue;"><%= comment.name %></h5>
+        <blockquote>          
+          <h5><%= comment.comment %></h5>
+        </blockquote>    
+        
+        
+        <%#= link_to 'Show', comment %>
+        <%#= link_to 'Edit', edit_comment_path(comment) %>
+        <%#= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>      
+    <% end %>
+    <center><%= will_paginate @comments%></center>
+  </div>
+  <%end%>
+  <div class="col-md-3"></div>
+</div>
+
+<%= render 'layouts/special'%>
+
+
+
+
+
+
+
+
+    
+ 

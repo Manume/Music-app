@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">    
+      <%= image_tag @album.banner_url,width: 860,height: 200, :class => "img-responsive" %>     
+    </div>    
+    <div class="row jwp">
+    <center>      
+      <div id="jp_container_1" class="jp-video jp-video-270p ">
+       <div class="jp-type-playlist">
+        <div class="jp-playlist">
+          <ul>
+            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+            <li></li>
+          </ul>
+        </div>
+        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+        <div class="jp-gui">
+          <div class="jp-video-play">
+            <a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+          </div>
+          <div class="jp-interface">
+            <div class="jp-progress">
+              <div class="jp-seek-bar">
+                <div class="jp-play-bar"></div>
+              </div>
+            </div>
+            <div class="jp-current-time"></div>
+            <div class="jp-duration"></div>
+            <div class="jp-details">
+              <ul>
+                <li><span class="jp-title"></span></li>
+              </ul>
+            </div>
+            <div class="jp-controls-holder">
+              <ul class="jp-controls">
+                <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+              </ul>
+              <div class="jp-volume-bar">
+                <div class="jp-volume-bar-value"></div>
+              </div>
+              <ul class="jp-toggles">
+                <li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
+                <li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
+                <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+                <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="jp-no-solution">
+          <span>Update Required</span>
+          To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+        </div>
+      </div> 
+    </div>
+    <div id="player_div"></div> 
+    </center> 
+  </div>
+  <div class="row">    
+    <div class="col-md-5">
+      <%= image_tag @album.cover_url,width: 300,height: 500, :class => "img-responsive" %>      
+    </div>
+    <div class="col-md-7">
+      <%= link_to 'Back', albums_path,class: "pull-right btn btn-primary" %>
+      <h3>Film:<%= @album.name %></h3>
+      <%@album.audios.each do |audio|%>
+        <ul  style ="color: white;">
+          <li><%= audio.artist%>.Name:<%= audio.title%></li>
+          <li>size:<%= audio.size%>mb</li>
+          <li>Singer:<%= audio.singer%></li>
+          <li><%= link_to "Download",audio.audio.url%></li>
+        </ul>        
+      <%end%>      
+    </div>    
+  </div>
+  <div class="row"> 
+    <div class="carousel slide" id="myCarousel" >
+    <div class="carousel-inner" style="height:180px">    
+      <div class="item active" >
+        <div class="col-lg-3"><a href="<%= album_path(@album_first) %>">
+        <%= image_tag @album_first.cover_url , :class => "img-responsive" %></a></div>
+      </div>
+      <% @albums_remain.each do |album| %>
+      <div class="item" >
+        <div class="col-lg-3"><a href="<%= album_path(album) %>"><%= image_tag album.cover_url , :class => "img-responsive" %></a></div>
+      </div>
+      <%end%>    
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>  
+  </div>
+</div>
+</div>
+
+
+
+
+<%= render 'layouts/special' %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

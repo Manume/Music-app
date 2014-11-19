@@ -1,0 +1,113 @@
+<h1>New album</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', albums_path %>
+
+
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-6">
+    <ol>
+          <li>
+            <ul>
+              <% @new_albums.each do |new_album|%>          
+                <li class="l4link">
+                 <%= link_to (image_tag new_album.banner,width: 100,height: 100),new_album%><br>
+                 <center><%= new_album.name%></center>
+                </li>          
+              <%end%>
+            </ul>
+          </li>
+        </ol>
+  </div>
+  <div class="col-md-4">
+    <% @old_albums.each do |old_album|%>
+          <%= old_album.name%>
+
+    <%end%>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">
+      <h4>Description about site</h4>
+    </div>
+    <div class="row">
+       <% if @albums.count==0%>
+        <div><center><h4>No Albums</h4></center></div>
+      <% else %>
+        <% @album_first_id=@album_first.id %>
+        <% @albums_remain=@albums.where('id NOT IN(?)', @album_first_id) %>   
+        <div id="owl-demo" class="owl-carousel">
+        <% @albums.each do |album| %>
+          <div class="item"> <a href="<%= album_path(album) %>"><%= image_tag album.cover_url , :class => "img-responsive" %></a><center><%= album.name%></center> </div>
+        <%end%> 
+      </div>
+      <div class="row" >
+      <center><h3>Albums</h3></center>
+      <div class="carousel slide" id="myCarousel" >
+        <div class="carousel-inner" style="height:180px">    
+          <div class="item active" >
+            <div class="col-md-3"><a href="<%= album_path(@album_first) %>">
+            <%= image_tag @album_first.cover_url , :class => "img-responsive" %></a></div>
+          </div>
+          <% @albums_remain.each do |album| %>
+          <div class="item" >
+            <div class="col-md-3"><a href="<%= album_path(album) %>"><%= image_tag album.cover_url , :class => "img-responsive" %></a></div>
+          </div>
+          <%end%>    
+        </div>
+       <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+      </div>
+    </div>
+    <% end %>
+    </div>
+    </div>
+    
+    
+    <div class="row">
+      <div class="col-md-9">
+        <ol>
+          <li>
+            <ul>
+              <% @new_albums.each do |new_album|%>          
+                <li class="l4link">
+                 <%= link_to (image_tag new_album.banner,width: 100,height: 100),new_album%><br>
+                 <center><%= new_album.name%></center>
+                </li>          
+              <%end%>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div class="col-md-3">
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= link_to 'New Album', new_album_path %>

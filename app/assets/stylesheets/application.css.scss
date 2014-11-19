@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ 
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.jwp{
+  padding-right: 20px;
+}
+body{
+ 
+	background: url(images21.jpeg);
+	 background-attachment: fixed;
+
+}
+.top{
+	
+	text-align: center;	
+    height:150px;
+    background: url(top.jpeg);
+    background-position:center;
+
+    
+	h2{
+	  color: #66FFFF;
+	   text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+	  font-size: 55px;
+      font-family: Times New Roman, serif;
+      padding-top:20px;
+	}
+	.pull-right{
+	  p{
+	  	margin-right: 100px;
+	  }
+	}
+	
+}
+footer{
+	background: url(top.jpeg);
+	height:150px;	
+	h4{
+	  color:#00FFFF;
+	  text-align: center;
+	  padding-top:40px;
+	}
+
+}
+h3,h4{
+	color:#00FFFF;
+	text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+}
+.site_description{
+	text-align: center;
+	h4{
+		color: #00FFFF;
+	}
+	article{
+		color: white;
+	}
+}
+
+
+.a {list-style-type: number;}
+
+
+
+.navbar {
+      
+   .navbar-brand {
+    color: #00FFFF;
+     font-family: "Calibri (Body)";
+   }
+
+   .nav > li > a {
+    color:#00FFFF;
+	text-shadow: 1px 1px 1px #000, 
+               3px 3px 5px blue;
+   }
+}
