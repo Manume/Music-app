@@ -23,8 +23,7 @@
 }
 body{
  
-	
-	background: asset_url("public/assests/images21-d3fe7827b8a8aff26c80847c18fe3728.jpeg");
+	background-color:black;
 	 background-attachment: fixed;
 
 }
@@ -32,7 +31,7 @@ body{
 	
 	text-align: center;	
     height:150px;
-    background: url('public/assests/images21-d3fe7827b8a8aff26c80847c18fe3728.jpeg');
+    background: url(top.jpeg);
     background-position:center;
 
     
@@ -52,7 +51,7 @@ body{
 	
 }
 footer{
-	background: url('./top.jpeg');
+	background: url(top.jpeg);
 	height:150px;	
 	h4{
 	  color:#00FFFF;
