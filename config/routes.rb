@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :notifications
 
-  mount RailsAdmin::Engine => '/manu9633637705', as: 'rails_admin'
+  
   resources :posts
 
   resources :contacts
