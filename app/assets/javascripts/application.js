@@ -13,6 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-
+//= require player.js
 //= require_tree .
 
