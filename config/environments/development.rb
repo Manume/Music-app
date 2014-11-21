@@ -23,7 +23,7 @@ Rails.application.configure do
    config.action_mailer.smtp_settings = {
   :address => "smtp.gmail.com",
   :port => 587,
-  :domain => "localhost:3000",
+  :domain => "https://sheltered-tundra-6126.herokuapp.com",
   :user_name => "manu.ideology@gmail.com",
   :password => "ideology123",
 

@@ -38,6 +38,10 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'carrierwave'
+gem "fog", "~> 1.3.1"
+
+gem 'carrierwave_direct'
+gem 'sidekiq'
 gem 'rabl'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
