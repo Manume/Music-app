@@ -32,7 +32,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         # Tell the UserMailer to send a welcome email after save
-        ContactMailer.welcome_email(@contact).deliver
+        #ContactMailer.welcome_email(@contact).deliver
  
         format.html { redirect_to(new_contact_path, notice: 'Your Message was successfully Send.') }
         format.json { render json: @contact, status: :created, location: @contact }
