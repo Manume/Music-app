@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
-    @posts = Post.all
+    redirect_to new_contact_path
   end
 
   # GET /contacts/new
