@@ -4,8 +4,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
-    @posts = Post.all
+    redirect_to new_contact_path
   end
 
   # GET /contacts/1
