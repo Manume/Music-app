@@ -1,28 +1,32 @@
-== README
+Josmy Jose <josmy@dreamzconsultants.com>
+	
+12:16 (53 minutes ago)
+		
+to me
+Hi Manu,
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Greetings From Dreamz Consultants!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Please find the JD and revert back with your updated Cv with CCTC, ECTC and Notice Period also
+
+
+Company : Radieux
+Location   : TVM
+Skill Set    : Ruby on Rails
+
+We are a dedicated team of software professionals having years of experience in efficiently providing business software solutions. The experience which we have gained over the years, paved way for the starting of Radieux as an offshore software development centre. Our team has years of experience in providing IT Solutions for both small Medium and Large corporate clients all over the World.
+For more details visit
+www.radieuxindia.com
+
+
+-- 
+Josmy Jose
+Dreamz Consultants
+Cochin
+PH: 0484 6444594
+
+
+
+user_id:manume
+password:m3229440
